@@ -1,0 +1,61 @@
+.filter{
+    box-sizing: border-box;
+
+    /* Auto layout */
+    margin-top: 100px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+
+
+    width: 270px;
+    height: 320px;
+
+
+    background: #FFFFFF;
+    /* Grey 200 */
+
+    border: 1px solid #EAEBED;
+    border-radius: 12px;
+}
+.headerInFilter{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+@media only screen and (max-width: 800px)  {.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}}
+@media only screen and (min-width: 800px)  {
+    .body{
+
+        display: flex;
+
+
+    }
+}
+
+.search{
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 600px;
+}
+
+.Loader{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.Paginator{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

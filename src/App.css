@@ -1,0 +1,14 @@
+.App{
+    box-sizing: border-box;
+
+    position: relative;
+
+
+    background: #E5E5E5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+a:active, a:hover {
+    outline-width: 0px;
+}

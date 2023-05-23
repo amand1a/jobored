@@ -1,0 +1,15 @@
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+
+    max-width: 773px;
+    height: 596px;
+    margin-left: 334px;
+    margin-top: 124px;
+
+}

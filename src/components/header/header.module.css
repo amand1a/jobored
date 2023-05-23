@@ -1,0 +1,59 @@
+.header{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   justify-content:center;
+    padding: 10px 20px;
+
+    isolation: isolate;
+
+    position: absolute;
+
+    height: 84px;
+    left: 0px;
+    top: 0px;
+
+    /* White */
+
+    background: #FFFFFF;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    isolation: isolate;
+
+    color: #0e2121;
+    height: 84px;
+    left: 0px;
+    top: 0px;
+    justify-self: center;
+
+
+
+}
+.links:hover{
+    color: #5E96FC;
+}
+
+@media (max-width: 500px) {
+   .logo{
+
+   }
+}
+@media only screen and (max-width: 500px)  {.logo{
+
+}}
+@media only screen and (min-width: 500px)  {
+    .logo{
+
+        position: absolute;
+        left: 20px;
+
+
+    }
+}
