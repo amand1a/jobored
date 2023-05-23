@@ -1,4 +1,5 @@
 {
+  "homepage": "https://amand1a.github.io/jobored",
   "name": "superjob",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +18,8 @@
     "@types/react-dom": "^18.0.0",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.4.0",
+    "gh-pages": "^5.0.0",
+    "git-pages": "^0.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-paginate": "^8.2.0",
@@ -27,6 +30,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
