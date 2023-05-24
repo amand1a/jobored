@@ -17,7 +17,7 @@ function App(){
         const fetchData = async () => {
 
             const response = await notAuth.getToken();
-
+            debugger
             const {access_token , refresh_token} = response.data
             localStorage.setItem("access_token",access_token)
             localStorage.setItem("refresh_token",refresh_token);
@@ -50,12 +50,11 @@ function App(){
   return (
     <div className="App">
       <HeaderComp />
-      <Routes>
-        <Route path="/" element={ <Jobs/>}/>
-        <Route path="/:id" element={ <Job/>}/>
-          <Route path="/favorites" element={<Favorites/>}/>
-      </Routes>
-
+        <Routes>
+            <Route path="/" element={ <Jobs/>}/>
+            <Route path="/:id" element={ <Job/>}/>
+            <Route path="/favorites" element={<Favorites/>}/>
+        </Routes>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, MouseEventHandler} from 'react';
 import styles from './jobElementLink.module.css';
 import {NavLink, useNavigate} from "react-router-dom";
 import { Button } from '@mantine/core';
@@ -28,20 +28,24 @@ const JobElementLink: FC<IJobElementLink> = ({isFavorite, link,id,profession,add
     if(payment_to){
         currencyString += ` до ${payment_to}`
     }
-    const like =()=>{
+    const like =(event:any)=>{
         dispatch(addFavoriteJobs(id))
+        event.stopPropagation()
     }
-    const unLike =()=>{
+    const unLike =(event:any)=>{
         dispatch(deleteFavoriteJobs(id))
+        event.stopPropagation()
     }
     return (
-        <div data-elem={`vacancy-${id}`}  className={styles.body}>
+        <div onClick={(event)=>{
+            navigate(`/${id}`)}
+        } data-elem={`vacancy-${id}`}  className={styles.body}>
             {isFavorite?<Button data-elem={`vacancy-${id}-shortlist-button`} className={styles.star} onClick={unLike} variant="subtle" ><span >&#9733;</span>  </Button>:
                 <Button data-elem={`vacancy-${id}-shortlist-button`} className={styles.star} onClick={like} variant="subtle" color="gray"><span >&#9733;</span>  </Button>}
 
         <div className={styles.title}>
             <div className={styles.linkW}>
-                {link === "link"?<NavLink className={styles.link} to={`/${id}`}>{profession}</NavLink>:<p className={styles.profession}>{profession}</p>}
+                {link === "link"?<NavLink onClick={(event)=>{event.stopPropagation()}} className={styles.link} to={`/${id}`}>{profession}</NavLink>:<p className={styles.profession}>{profession}</p>}
             </div>
             <div className={styles.currencyTitle}>
                 <p className={styles.currency}>
